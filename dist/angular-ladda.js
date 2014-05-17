@@ -16,14 +16,18 @@
           restrict: 'A',
           link: function (scope, element, attrs) {
             element.addClass('ladda-button');
-            element.data('style', 'zoom-in');
-            var contents = element.contents();
-            var ladda = Ladda.create(element[0]); // ladda replace html
-            angular.element(element.children()[0]).replaceWith(contents);
+            if(angular.isUndefined(element.attr('data-style'))) {
+              element.attr('data-style', 'zoom-in');
+            }
+            var ladda = Ladda.create( element[0] );
+            $compile(angular.element(element.children()[0]).contents())(scope);
 
             scope.$watch(attrs.ladda, function(loading) {
               if(loading) {
                 ladda.start();
+                if(angular.isNumber(loading)) {
+                  ladda.setProgress(loading);
+                }
               } else {
                 ladda.stop();
               }

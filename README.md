@@ -51,8 +51,34 @@ var myApp = angular.module('myApp', ['angular-ladda']);
 
 ### view
 
+basic
+
 ```html
 <button ladda="loginLoading" ng-click="login()">
+  Login
+</button>
+```
+
+change style of effect
+
+```html
+<button ladda="loginLoading" ng-click="login()" data-style="expand-left">
+  Login
+</button>
+```
+
+change size of spinner
+
+```html
+<button ladda="loginLoading" ng-click="login()" data-size="l">
+  Login
+</button>
+```
+
+change color of spinner
+
+```html
+<button ladda="loginLoading" ng-click="login()" data-spinner-color="#FF0000">
   Login
 </button>
 ```
