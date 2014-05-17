@@ -39,11 +39,10 @@ var myApp = angular.module('myApp', ['angular-ladda']);
 ### controller
 
 ```javascript
-  $scope.loginLoading = false;
   $scope.login = function() {
     // start loading
     $scope.loginLoading = true;
-    var loginService = loginService.login(function() {
+    loginService.login(function() {
       // stop loading
       $scope.loginLoading = false;
     });

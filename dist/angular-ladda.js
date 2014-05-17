@@ -1,7 +1,7 @@
 /**!
  * AngularJS ladda directive
  * @author Chungsub Kim <subicura@subicura.com>
- * @version 0.1.2
+ * @version 0.1.3
  */
 
 (function () {
