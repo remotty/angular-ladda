@@ -52,7 +52,7 @@ var myApp = angular.module('myApp', ['angular-ladda']);
 ### view
 
 ```html
-<button type="submit" class="btn btn-default" ladda="loginLoading" ng-click="login()">
+<button ladda="loginLoading" ng-click="login()">
   Login
 </button>
 ```
