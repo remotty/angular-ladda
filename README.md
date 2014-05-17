@@ -2,9 +2,19 @@
 
 AngularJS directive for Ladda
 
-## Quick example
+## Get Started
 
-### index.html
+(1) Get angular-ladda via [Bower](http://bower.io/)
+
+```sh
+$ bower install angular-ladda
+```
+or add bower.json
+```sh
+$ bower install angular-ladda --save
+```
+
+(2) add css & javascript link to html
 
 ```html
 ...
@@ -15,6 +25,16 @@ AngularJS directive for Ladda
 <script src="bower_components/angular-ladda/dist/angular-ladda.js"></script>
 ...
 ```
+
+(3) add `'angular-ladda'` to your main module's list of dependencies
+
+```javascript
+var myApp = angular.module('myApp', ['angular-ladda']);
+```
+
+(4) enjoy!
+
+## Quick example
 
 ### controller
 
@@ -33,7 +53,7 @@ AngularJS directive for Ladda
 ### view
 
 ```html
-<button type="submit" class="btn btn-default" ladda="loginLoading" ng-click="login">
+<button type="submit" class="btn btn-default" ladda="loginLoading" ng-click="login()">
   Login
 </button>
 ```
