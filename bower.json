@@ -1,0 +1,24 @@
+{
+  "name": "angular-ladda",
+  "version": "0.0.1",
+  "homepage": "https://github.com/remotty/angular-ladda",
+  "authors": [
+    "Chungsub Kim <subicura@subicura.com>"
+  ],
+  "description": "Ladda directive for AngularJS",
+  "main": "dist/angular-ladda.js",
+  "keywords": [
+    "ladda",
+    "angular",
+    "directive"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "bower_components"
+  ],
+  "dependencies": {
+    "angular": "~1.2.16",
+    "ladda": "~0.9.3"
+  }
+}
