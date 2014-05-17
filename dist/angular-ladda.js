@@ -24,7 +24,9 @@
 
             scope.$watch(attrs.ladda, function(loading) {
               if(loading) {
-                ladda.start();
+                if(!ladda.isLoading()) {
+                  ladda.start();
+                }
                 if(angular.isNumber(loading)) {
                   ladda.setProgress(loading);
                 }
