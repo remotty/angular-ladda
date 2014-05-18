@@ -23,7 +23,7 @@
             $compile(angular.element(element.children()[0]).contents())(scope);
 
             scope.$watch(attrs.ladda, function(loading) {
-              if(loading) {
+              if(loading || angular.isNumber(loading)) {
                 if(!ladda.isLoading()) {
                   ladda.start();
                 }
