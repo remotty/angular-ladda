@@ -13,7 +13,7 @@ module.exports = function(grunt) {
         jshintrc: '.jshintrc',
         reporter: require('jshint-stylish')
       },
-      all: ['src/angular-ladda.js']
+      all: ['src/**/*.js']
     },
     ngmin: {
       directives: {
