@@ -5,8 +5,8 @@
   "authors": [
     "Chungsub Kim <subicura@subicura.com>"
   ],
-  "description": "Ladda directive for AngularJS",
-  "main": "dist/angular-ladda.js",
+  "description": "An angular directive wrapper for Ladda.",
+  "main": "dist/angular-ladda.min.js",
   "keywords": [
     "ladda",
     "loading",

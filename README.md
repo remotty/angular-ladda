@@ -1,6 +1,6 @@
 # angular-ladda
 
-AngularJS directive for Ladda
+An angular directive wrapper for Ladda.
 
 ## Getting started
 
