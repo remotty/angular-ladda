@@ -1,9 +1,9 @@
 /**!
  * AngularJS ladda directive
  * @author Chungsub Kim <subicura@subicura.com>
- * @version 0.1.4
  */
 
+/* global Ladda */
 (function () {
   'use strict';
 
