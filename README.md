@@ -2,7 +2,7 @@
 
 AngularJS directive for Ladda
 
-## Get Started
+## Getting started
 
 (1) Get angular-ladda via [Bower](http://bower.io/)
 

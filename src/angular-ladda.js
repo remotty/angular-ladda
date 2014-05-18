@@ -1,5 +1,5 @@
 /**!
- * AngularJS ladda directive
+ * AngularJS Ladda directive
  * @author Chungsub Kim <subicura@subicura.com>
  */
 
