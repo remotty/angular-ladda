@@ -85,7 +85,7 @@ change color of spinner
 
 ## Links
 
-* [ladda](http://lab.hakim.se/ladda/)
+* [Ladda](http://lab.hakim.se/ladda/)
 
 ## Contributing
 
