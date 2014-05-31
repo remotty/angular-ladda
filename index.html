@@ -1,0 +1,268 @@
+<!doctype html>
+<html ng-app="ladda">
+<head>
+<meta charset="utf-8">
+<title>angular-ladda</title>
+<meta name="description" content="angular-ladda">
+<meta name="viewport" content="width=device-width">
+
+<link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="ladda/ladda-themeless.min.css" rel="stylesheet" type="text/css">
+<link href="prism.css" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" type="text/css">
+<style>
+  body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #efefef;
+  }
+  pre {
+    border: 0;
+  }
+  .body-wrapper {
+    background-color: #fff;
+    margin-top: 30px;
+    padding: 30px;
+  }
+  .main-title {
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  .demo-list {
+    padding: 10px 0;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+  <a href="https://github.com/remotty/angular-ladda"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
+  <div class="body-wrapper container">
+    <h1 class="main-title">angular-ladda</h1>
+    <p>An angular directive wrapper for Ladda.</p>
+
+    <hr />
+
+    <h2>Demo</h2>
+    <div ng-controller="DemoCtrl">
+      <div class="demo-list">
+        <h4>Styles</h4>
+      </div>
+      <div class="demo-list">
+        <a ladda="loading.expand_left" class="btn btn-primary" data-style="expand-left" ng-click="clickBtn('expand-left')">
+          expand-left
+        </a>
+        <a ladda="loading.expand_right" class="btn btn-primary" data-style="expand-right" ng-click="clickBtn('expand-right')">
+          expand-right
+        </a>
+        <a ladda="loading.expand_up" class="btn btn-primary" data-style="expand-up" ng-click="clickBtn('expand-up')">
+          expand-up
+        </a>
+        <a ladda="loading.expand_down" class="btn btn-primary" data-style="expand-down" ng-click="clickBtn('expand-down')">
+          expand-down
+        </a>
+      </div>
+      <div class="demo-list">
+        <a ladda="loading.contract" class="btn btn-warning" data-style="contract" ng-click="clickBtn('contract')">
+          contract
+        </a>
+        <a ladda="loading.contract_overlay" class="btn btn-warning" data-style="contract-overlay" ng-click="clickBtn('contract-overlay')">
+          overlay
+        </a>
+        <a ladda="loading.zoom_in" class="btn btn-warning" data-style="zoom-in" ng-click="clickBtn('zoom-in')">
+          zoom-in
+        </a>
+        <a ladda="loading.zoom_out" class="btn btn-warning" data-style="zoom-out" ng-click="clickBtn('zoom-out')">
+          zoom-out
+        </a>
+      </div>
+      <div class="demo-list">
+        <a ladda="loading.slide_left" class="btn btn-danger" data-style="slide-left" ng-click="clickBtn('slide-left')">
+          slide-left
+        </a>
+        <a ladda="loading.slide_right" class="btn btn-danger" data-style="slide-right" ng-click="clickBtn('slide-right')">
+          slide-right
+        </a>
+        <a ladda="loading.slide_up" class="btn btn-danger" data-style="slide-up" ng-click="clickBtn('slide-up')">
+          slide-up
+        </a>
+        <a ladda="loading.slide_down" class="btn btn-danger" data-style="slide-down" ng-click="clickBtn('slide-down')">
+          slide-down
+        </a>
+      </div>
+
+      <div class="demo-list">
+        <h4>Built-in progress bar</h4>
+      </div>
+      <div class="demo-list">
+        <a ladda="loading.expand_right_progress" class="btn btn-primary" data-style="expand-right" ng-click="clickProgressBtn('expand-right')">
+          expand-right
+        </a>
+        <a ladda="loading.contract_progress" class="btn btn-primary" data-style="contract" ng-click="clickProgressBtn('contract')">
+          contract
+        </a>
+      </div>
+
+      <div class="demo-list">
+        <h4>Sizes</h4>
+      </div>
+      <div class="demo-list">
+        <a ladda="loading.xs" class="btn btn-xs btn-info" data-style="expand-right" data-size="xs" ng-click="clickBtn('xs')">
+          extra small
+        </a>
+        <a ladda="loading.sm" class="btn btn-sm btn-info" data-style="expand-right" data-size="sm" ng-click="clickBtn('sm')">
+          small
+        </a>
+        <a ladda="loading.lg" class="btn btn-lg btn-info" data-style="expand-right" data-size="l" ng-click="clickBtn('lg')">
+          large
+        </a>
+      </div>
+
+      <div class="demo-list">
+        <h4>Colors</h4>
+      </div>
+      <div class="demo-list">
+        <a ladda="loading.red" class="btn btn-default" data-style="expand-right" data-spinner-color="#ff0000" ng-click="clickBtn('red')">
+          red
+        </a>
+        <a ladda="loading.gray" class="btn btn-default" data-style="expand-right" data-spinner-color="#999999" ng-click="clickBtn('gray')">
+          gray
+        </a>
+        <a ladda="loading.black" class="btn btn-default" data-style="expand-right" data-spinner-color="#000000" ng-click="clickBtn('black')">
+          black
+        </a>
+      </div>
+    </div>
+
+    <hr />
+
+    <h2>Usage</h2>
+
+    <p>(1) Get angular-ladda via Bower</p>
+    <pre><code class="language-bash">$ bower install angular-ladda</code></pre>
+    <p>or add bower.json</p>
+    <pre><code class="language-bash">$ bower install angular-ladda --save</code></pre>
+
+    <p>(2) add css & javascript link to html</p>
+    <pre><code class="language-markup">...
+&lt;link rel="stylesheet" href="bower_components/ladda/dist/ladda-themeless.min.css"&gt;
+...
+&lt;script src="bower_components/ladda/js/spin.js"&gt;&lt;/script&gt;
+&lt;script src="bower_components/ladda/js/ladda.js"&gt;&lt;/script&gt;
+&lt;script src="bower_components/angular-ladda/dist/angular-ladda.min.js"&gt;&lt;/script&gt;
+...</code></pre>
+
+    <p>(3) add 'angular-ladda' to your main module's list of dependencies</p>
+    <pre><code class="language-javascript">var myApp = angular.module('myApp', ['angular-ladda']);</code></pre>
+
+    <hr />
+
+    <h2>Control</h2>
+    <h3>start loading</h3>
+    <p>set <code>true</code> value</p>
+    <pre><code class="language-markup">&lt;button ladda="true"&gt;Button&lt;/button&gt;</code></pre>    
+
+    <h3>stop loading</h3>
+    <p>set <code>false</code> value</p>
+    <pre><code class="language-markup">&lt;button ladda="false"&gt;Button&lt;/button&gt;</code></pre>    
+
+    <h3>set progress</h3>
+    <p>set <code>float</code> value</p>
+    <pre><code class="language-markup">&lt;button ladda="0.1"&gt;Button&lt;/button&gt;</code></pre>    
+
+    <hr />
+
+    <h2>Quick Examples</h2>
+    <h3>controller</h3>
+    <pre><code class="language-javascript">$scope.clickBtn = function() {
+  $scope.loading = true; // start loading
+  $timeout(function() {
+    $scope.loading = false; // stop loading
+  }, 2000);
+}</code></pre>
+
+    <h3>view</h3>
+    <h4>default(zoom-in)</h4>
+    <pre><code class="language-markup">&lt;button ladda="loading" ng-click="clickBtn()"&gt;
+  Button
+&lt;/button&gt;</code></pre>    
+
+    <h4>change styles</h4>
+    <p>use <code>data-style</code> attribute</p>
+    <pre><code class="language-markup">&lt;button ladda="loading" ng-click="clickBtn()" data-style="expand-right"&gt;
+  Button
+&lt;/button&gt;</code></pre>
+    <ul>
+      <li>expand-left</li>
+      <li>expand-left</li>
+      <li>expand-right</li>
+      <li>expand-up</li>
+      <li>zoom-in</li>
+      <li>zoom-out</li>
+      <li>slide-left</li>
+      <li>slide-right</li>
+      <li>slide-up</li>
+      <li>slide-down</li>
+      <li>contract</li>
+    </ul>
+
+    <h4>change size</h4>
+    <p>use <code>data-size</code> attribute</p>
+    <pre><code class="language-markup">&lt;button ladda="loading" ng-click="clickBtn()" data-size="l"&gt;
+  Button
+&lt;/button&gt;</code></pre>
+    <ul>
+      <li>xs</li>
+      <li>s</li>
+      <li>l</li>
+      <li>xl</li>
+    </ul>
+
+    <h4>change spinner color</h4>
+    <p>use <code>data-spinner-color</code> attribute</p>
+    <pre><code class="language-markup">&lt;button ladda="loading" ng-click="clickBtn()" data-spinner-color="#000000"&gt;
+  Button
+&lt;/button&gt;</code></pre>
+    
+    <hr />
+
+    <h2>Link</h2>
+    <p>
+      <a href="http://lab.hakim.se/ladda/" target="_blank">Ladda</a>
+    </p>
+  </div>
+
+  <script src="prism.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.16/angular.min.js"></script>
+  <script src="ladda/spin.min.js"></script>
+  <script src="ladda/ladda.min.js"></script>
+  <script src="angular-ladda.min.js"></script>
+  <script>
+    angular.module('ladda', ['angular-ladda'])
+      .controller('DemoCtrl', function($scope, $timeout) {
+        $scope.loading = {};
+        $scope.clickBtn = function(style) {
+          $scope.loading[style.replace('-','_')] = true;
+          $timeout(function() {
+            $scope.loading[style.replace('-','_')] = false;
+          }, 2000);
+        };
+        $scope.clickProgressBtn = function(style) {
+          $scope.loading[style.replace('-','_') + "_progress"] = true;
+          $timeout(function() {
+            $scope.loading[style.replace('-','_') + "_progress"] = 0.1;
+          }, 500);
+          $timeout(function() {
+            $scope.loading[style.replace('-','_') + "_progress"] += 0.1;
+          }, 1000);
+          $timeout(function() {
+            $scope.loading[style.replace('-','_') + "_progress"] += 0.1;
+          }, 1500);
+          $timeout(function() {
+            $scope.loading[style.replace('-','_') + "_progress"] = false;
+          }, 2000);
+        };
+      });
+  </script>
+</body>
+</html>
