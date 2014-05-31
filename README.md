@@ -2,6 +2,9 @@
 
 An angular directive wrapper for Ladda.
 
+[Check out the demo page.](http://remotty.github.io/angular-ladda)
+
+
 ## Getting started
 
 (1) Get angular-ladda via [Bower](http://bower.io/)
