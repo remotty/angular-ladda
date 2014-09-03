@@ -73,7 +73,7 @@ change style of effect
 change size of spinner
 
 ```html
-<button ladda="loginLoading" ng-click="login()" data-size="l">
+<button ladda="loginLoading" ng-click="login()" data-spinner-size="10">
   Login
 </button>
 ```
