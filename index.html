@@ -107,14 +107,14 @@
         <h4>Sizes</h4>
       </div>
       <div class="demo-list">
-        <a ladda="loading.xs" class="btn btn-xs btn-info" data-style="expand-right" data-size="xs" ng-click="clickBtn('xs')">
-          extra small
+        <a ladda="loading.xs" class="btn btn-lg btn-info" data-style="expand-right" data-spinner-size="10" ng-click="clickBtn('xs')">
+          10
         </a>
-        <a ladda="loading.sm" class="btn btn-sm btn-info" data-style="expand-right" data-size="sm" ng-click="clickBtn('sm')">
-          small
+        <a ladda="loading.sm" class="btn btn-lg btn-info" data-style="expand-right" data-spinner-size="20" ng-click="clickBtn('sm')">
+          20
         </a>
-        <a ladda="loading.lg" class="btn btn-lg btn-info" data-style="expand-right" data-size="l" ng-click="clickBtn('lg')">
-          large
+        <a ladda="loading.lg" class="btn btn-lg btn-info" data-style="expand-right" data-spinner-size="30" ng-click="clickBtn('lg')">
+          30
         </a>
       </div>
 
@@ -207,15 +207,15 @@
     </ul>
 
     <h4>change size</h4>
-    <p>use <code>data-size</code> attribute</p>
-    <pre><code class="language-markup">&lt;button ladda="loading" ng-click="clickBtn()" data-size="l"&gt;
+    <p>use <code>data-spinner-size</code> attribute</p>
+    <pre><code class="language-markup">&lt;button ladda="loading" ng-click="clickBtn()" data-spinner-size="30"&gt;
   Button
 &lt;/button&gt;</code></pre>
     <ul>
-      <li>xs</li>
-      <li>s</li>
-      <li>l</li>
-      <li>xl</li>
+      <li>10</li>
+      <li>20</li>
+      <li>30</li>
+      <li>any size(number)</li>
     </ul>
 
     <h4>change spinner color</h4>
