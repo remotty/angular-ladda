@@ -16,7 +16,7 @@
         return {
           restrict: 'A',
           link: function (scope, element, attrs) {
-            $timeout(function(){
+            $timeout(function() {
               element.addClass('ladda-button');
               if(angular.isUndefined(element.attr('data-style'))) {
                 element.attr('data-style', 'zoom-in');
