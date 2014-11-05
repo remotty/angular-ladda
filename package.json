@@ -6,6 +6,23 @@
     "grunt-ngmin": "~0.0.3",
     "grunt-contrib-uglify": "~0.4.0",
     "grunt-contrib-jshint": "~0.10.0",
-    "jshint-stylish": "~0.2.0"
-  }
+    "jshint-stylish": "~1.0.0"
+  },
+  "description": "An angular directive wrapper for Ladda.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/remotty/angular-ladda.git"
+  },
+  "keywords": [
+    "angular",
+    "ladda",
+    "angular-ladda",
+    "ng-ladda"
+  ],
+  "author": "Chungsub Kim <subicura@subicura.com> (http://subicura.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/remotty/angular-ladda/issues"
+  },
+  "homepage": "https://github.com/remotty/angular-ladda"
 }
