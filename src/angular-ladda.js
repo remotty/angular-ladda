@@ -34,6 +34,11 @@
                   }
                 } else {
                   ladda.stop();
+                  // When the button also have the ng-disabled directive it needs to be 
+                  // re-evaluated since the disabled attribute is removed by the 'stop' method.
+                  if (attrs.ngDisabled) {
+                    element.attr('disabled', scope.$eval(attrs.ngDisabled));
+                  }
                 }
               });
             }, 0);
