@@ -16,12 +16,13 @@
         return {
           restrict: 'A',
           link: function (scope, element, attrs) {
+            element.addClass('ladda-button');
+            if(angular.isUndefined(element.attr('data-style'))) {
+              element.attr('data-style', 'zoom-in');
+            }
+            var ladda = Ladda.create( element[0] );
+
             $timeout(function() {
-              element.addClass('ladda-button');
-              if(angular.isUndefined(element.attr('data-style'))) {
-                element.attr('data-style', 'zoom-in');
-              }
-              var ladda = Ladda.create( element[0] );
               $compile(angular.element(element.children()[0]).contents())(scope);
 
               scope.$watch(attrs.ladda, function(loading) {

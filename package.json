@@ -1,6 +1,6 @@
 {
   "name": "angular-ladda",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-ngmin": "~0.0.3",

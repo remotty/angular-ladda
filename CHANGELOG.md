@@ -1,5 +1,8 @@
 # angular-ladda
 
+## 0.1.9
+ * fix recompiling issue
+
 ## 0.1.8
  * fix ng-disabled not working issue
 
