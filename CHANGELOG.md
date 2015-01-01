@@ -1,5 +1,9 @@
 # angular-ladda
 
+## 0.1.10
+ * fix duplicate compile issue (#8)
+ * fix ie11 "Invalid argument" issue (#9)
+
 ## 0.1.9
  * fix recompiling issue
 
