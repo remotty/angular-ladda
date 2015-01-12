@@ -1,6 +1,6 @@
 {
   "name": "angular-ladda",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "devDependencies": {
     "del": "^0.1.0",
     "gulp": "^3.6.0",

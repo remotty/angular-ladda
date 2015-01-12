@@ -1,5 +1,8 @@
 # angular-ladda
 
+## 0.1.11
+ * add laddaProvider for default option (#11)
+
 ## 0.1.10
  * fix duplicate compile issue (#8)
  * fix ie11 "Invalid argument" issue (#9)

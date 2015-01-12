@@ -7,12 +7,21 @@
 (function () {
   'use strict';
 
-  angular.module('angular-ladda', []).directive(
-    'ladda',
-    [
-      '$compile',
-      '$timeout',
-      function ($compile, $timeout) {
+  angular.module('angular-ladda', [])
+    .provider('ladda', function () {
+      var opts = {
+        'style': 'zoom-in'
+      };
+      return {
+        setOption: function (newOpts) {
+          angular.extend(opts, newOpts);
+        },
+        $get: function () {
+          return opts;
+        }
+      };
+    })
+    .directive('ladda', ['$compile', '$timeout', 'ladda', function ($compile, $timeout, laddaOption) {
         return {
           restrict: 'A',
           replace: false,
@@ -21,7 +30,7 @@
           link: function (scope, element, attrs) {
             element.addClass('ladda-button');
             if(angular.isUndefined(element.attr('data-style'))) {
-              element.attr('data-style', 'zoom-in');
+              element.attr('data-style', laddaOption.style || 'zoom-in');
             }
             var ladda = Ladda.create( element[0] );
 

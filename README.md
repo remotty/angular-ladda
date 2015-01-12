@@ -39,6 +39,32 @@ var myApp = angular.module('myApp', ['angular-ladda']);
 
 ## Quick example
 
+### options
+
+use `laddaProvider`
+
+- style
+   - expand-left
+   - expand-right
+   - expand-up
+   - expand-down
+   - zoom-in
+   - zoom-out
+   - slide-left
+   - slide-right
+   - slide-up
+   - slide-down
+   - contract
+
+```js
+angular.module(xxxx)
+  .config(function (laddaProvider) {
+    laddaProvider.setOption({ 
+      style: 'expand-left'
+    });
+  })
+```
+
 ### controller
 
 ```javascript
