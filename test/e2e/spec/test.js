@@ -17,6 +17,7 @@ describe('default test', function() {
 
   it('should exist spinner when ladda is true', function() {
     element(by.id('btn')).click();
+    browser.sleep(500);
     expect(element(by.css('#btn .ladda-spinner div')).isPresent()).toBe(true);
   });
 });
