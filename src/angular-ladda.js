@@ -36,6 +36,7 @@
 
             $timeout(function() {
               element.removeAttr('ladda');
+              element.removeAttr('data-ladda');
               $compile(element)(scope);
 
               scope.$watch(attrs.ladda, function(loading) {
