@@ -1,4 +1,4 @@
-# angular-ladda
+# angular-ladda [![Build Status](https://travis-ci.org/remotty/angular-ladda.svg?branch=master)](https://travis-ci.org/remotty/angular-ladda)
 
 An angular directive wrapper for Ladda.
 
