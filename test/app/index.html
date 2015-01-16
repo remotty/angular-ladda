@@ -13,12 +13,14 @@
           
         })
         .controller('TestController', ['$scope', function($scope) {
+          $scope.buttonText = "touch me";
           $scope.$rows = [{ id:1 }, { id:2 }];
           $scope.loader1 = true;
         }]);
     </script>
   </head>
   <body ng-controller="TestController">
+    <button id="btn" ladda="isLoading" ng-click="isLoading = true">{{ buttonText }}</button>
     <div ng-repeat="row in $rows">
       <button ladda="loader{{ row.id }}">Action</button>
     </div>
