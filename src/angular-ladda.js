@@ -26,7 +26,7 @@
           restrict: 'A',
           replace: false,
           terminal: true,
-          priority: 1000,
+          priority: -1000,
           link: function (scope, element, attrs) {
             element.addClass('ladda-button');
             if(angular.isUndefined(element.attr('data-style'))) {

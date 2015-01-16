@@ -13,11 +13,15 @@
           
         })
         .controller('TestController', ['$scope', function($scope) {
-          
+          $scope.$rows = [{ id:1 }, { id:2 }];
+          $scope.loader1 = true;
         }]);
     </script>
   </head>
   <body ng-controller="TestController">
+    <div ng-repeat="row in $rows">
+      <button ladda="loader{{ row.id }}">Action</button>
+    </div>
     <button ladda="true">ladda button</button>
     <form role="form" name='signUpForm' novalidate ladda="laddaLoad">
       <fieldset>

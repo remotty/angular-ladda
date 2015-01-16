@@ -1,5 +1,8 @@
 # angular-ladda
 
+## 0.1.13
+ * fix double curly binding broken issue (#12)
+
 ## 0.1.12
  * fix data-ladda attribute style (#13)
  * add test case
