@@ -1,5 +1,9 @@
 # angular-ladda
 
+## 0.1.12
+ * fix data-ladda attribute style (#13)
+ * add test case
+
 ## 0.1.11
  * add laddaProvider for default option (#11)
 

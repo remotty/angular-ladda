@@ -1,16 +1,16 @@
 <!doctype html>
 <html ng-app="testApp">
   <head>
-    <title>Default Title</title>
+    <title>Test</title>
     <link rel="stylesheet" href="/bower_components/ladda/dist/ladda-themeless.min.css">
     <script src="/bower_components/ladda/js/spin.js"></script>
     <script src="/bower_components/ladda/js/ladda.js"></script>
     <script src="/bower_components/angular/angular.min.js"></script>
-    <script src="/src/angular-ladda.js"></script>
+    <script src="/dist/angular-ladda.min.js"></script>
     <script>
       angular.module('testApp', ['angular-ladda'])
-        .config(function () {
-          
+        .config(function (laddaProvider) {
+
         })
         .controller('TestController', ['$scope', function($scope) {
           
@@ -18,7 +18,6 @@
     </script>
   </head>
   <body ng-controller="TestController">
-    <button ladda="true">ladda button</button>
     <form role="form" name='signUpForm' novalidate ladda="laddaLoad">
       <fieldset>
         <legend>Create new account</legend>
@@ -26,7 +25,6 @@
             <label class="control-label" for="email">Your email address</label>
             <input id="email" name="email" type="email" ng-model="registrationData.email" class="form-control" required>
             <p class="help-block" ng-if="signUpForm.email.$error.required">You need to fill your email address.</p>
-            <p class="help-block" ng-if="signUpForm.email.$error.email">Given email address is invalid.</p>
         </div>
       </fieldset>
       <button class="btn btn-primary btn-block ladda-button" ng-click="signUp()">
