@@ -1,0 +1,26 @@
+<!doctype html>
+<html ng-app="testApp">
+  <head>
+    <title>Default Title</title>
+    <link rel="stylesheet" href="/bower_components/ladda/dist/ladda-themeless.min.css">
+    <script src="/bower_components/ladda/js/spin.js"></script>
+    <script src="/bower_components/ladda/js/ladda.js"></script>
+    <script src="/bower_components/angular/angular.min.js"></script>
+    <script src="/src/angular-ladda.js"></script>
+    <script src="/scripts/app.js"></script>
+    <script>
+      angular.module('testApp', ['angular-ladda'])
+        .config(function (laddaProvider) {
+          laddaProvider.setOption({ 
+            style: 'expand-left'
+          });
+        })
+        .controller('TestController', ['$scope', function($scope) {
+          
+        }]);
+    </script>
+  </head>
+  <body ng-controller="TestController">
+    <button ladda="true">ladda button</button>
+  </body>
+</html>

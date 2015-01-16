@@ -1,0 +1,23 @@
+<!doctype html>
+<html ng-app="testApp">
+  <head>
+    <title>Test</title>
+    <link rel="stylesheet" href="/bower_components/ladda/dist/ladda-themeless.min.css">
+    <script src="/bower_components/ladda/js/spin.js"></script>
+    <script src="/bower_components/ladda/js/ladda.js"></script>
+    <script src="/bower_components/angular/angular.min.js"></script>
+    <script src="/dist/angular-ladda.min.js"></script>
+    <script>
+      angular.module('testApp', ['angular-ladda'])
+        .config(function (laddaProvider) {
+
+        })
+        .controller('TestController', ['$scope', function($scope) {
+          $scope.buttonText = "ladda button";
+        }]);
+    </script>
+  </head>
+  <body ng-controller="TestController">
+    <button id="btn" ladda="isLoading" ng-click="isLoading = true">{{ buttonText }}</button>
+  </body>
+</html>

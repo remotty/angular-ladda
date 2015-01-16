@@ -123,3 +123,23 @@ change color of spinner
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create a new Pull Request
+
+### setup
+
+```
+$ bower install
+$ npm install
+$ node_modules/protractor/bin/webdriver-manager update
+```
+
+### test
+
+```
+$ gulp test
+```
+
+### build
+
+```
+$ gulp
+```

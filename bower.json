@@ -18,7 +18,10 @@
   "license": "MIT",
   "ignore": [
     "**/.*",
-    "bower_components"
+    "protractor.conf.js",
+    "gulpfile.js",
+    "bower_components",
+    "node_modules"
   ],
   "dependencies": {
     "angular": ">= 1.2.0",
