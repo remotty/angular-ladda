@@ -3,29 +3,35 @@
   <head>
     <title>Default Title</title>
     <link rel="stylesheet" href="/bower_components/ladda/dist/ladda-themeless.min.css">
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css">
     <script src="/bower_components/ladda/dist/spin.min.js"></script>
     <script src="/bower_components/ladda/dist/ladda.min.js"></script>
-    <script src="/bower_components/angular/angular.min.js"></script>
+    <script src="/bower_components/angular/angular.js"></script>
     <script src="/src/angular-ladda.js"></script>
     <script>
       angular.module('testApp', ['angular-ladda'])
         .config(function () {
           
         })
-        .controller('TestController', ['$scope', function($scope) {
-          $scope.buttonText = "touch me";
+        .controller('TestController', ['$scope', '$timeout', function($scope, $timeout) {
+          $scope.buttonText = "touch";
           $scope.$rows = [{ id:1 }, { id:2 }];
           $scope.loader1 = true;
+
+          $timeout(function() {
+            $scope.loader = true;
+          }, 2000);
         }]);
     </script>
   </head>
   <body ng-controller="TestController">
-    <button id="btn" ladda="isLoading" ng-click="isLoading = true">{{ buttonText }}</button>
-    <div ng-repeat="row in $rows">
-      <button ladda="loader{{ row.id }}">Action</button>
+    <!-- <div ng-repeat="row in $rows">
+      <button id="loader{{ row.id }}" ladda="loader{{ row.id }}" class="btn btn-primary" ng-class="{ 'sample': true }">Action</button>
     </div>
-    <button ladda="true">ladda button</button>
-    <form role="form" name='signUpForm' novalidate ladda="laddaLoad">
+    <a class="btn btn-primary" ladda="loader1">test</a> -->
+    <a class="btn btn-primary" ladda="true" ng-if="loader1">test</a>
+    <a class="btn btn-primary" ladda="isLoading" ng-click="isLoading = true" ng-if="loader1">test</a>
+    <!-- <form role="form" name='signUpForm' novalidate ladda="laddaLoad">
       <fieldset>
         <legend>Create new account</legend>
         <div class="form-group" show-errors>
@@ -36,8 +42,12 @@
         </div>
       </fieldset>
       <button class="btn btn-primary btn-block ladda-button" ng-click="signUp()">
-        <span class="ladda-label">Sign up</span>
+        Sign up
       </button>
     </form>
+    <a class="btn btn-primary" ladda="true" ng-if="loader">ng-if true</a>
+    <a class="btn btn-primary" ladda="{{ buttonText }}">test</a>
+    <button id="btn" ladda="isLoading" ng-click="isLoading = true" class="btn btn-primary">{{ buttonText }}</button>
+    <button ladda="true" class="btn btn-primary">ladda button</button> -->
   </body>
 </html>

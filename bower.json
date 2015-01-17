@@ -1,6 +1,6 @@
 {
   "name": "angular-ladda",
-  "version": "0.1.13",
+  "version": "0.1.14",
   "homepage": "https://github.com/remotty/angular-ladda",
   "authors": [
     "Chungsub Kim <subicura@subicura.com>"
@@ -26,5 +26,8 @@
   "dependencies": {
     "angular": ">= 1.2.0",
     "ladda": "~0.9.3"
+  },
+  "devDependencies": {
+    "bootstrap": "~3.3.1"
   }
 }

@@ -1,5 +1,8 @@
 # angular-ladda
 
+## 0.1.14
+ * rollback 0.1.13 (#15)
+
 ## 0.1.13
  * fix double curly binding broken issue (#12)
 
