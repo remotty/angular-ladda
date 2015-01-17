@@ -14,14 +14,14 @@ exports.config = {
     'platform': 'Windows 8.1',
     'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER,
     'build': process.env.TRAVIS_BUILD_NUMBER,
-    'name': 'angular-ladda-iPhone'
+    'name': 'angular-ladda-ie11'
   },{
     'browserName': 'internet explorer',
     'version': '9',
     'platform': 'Windows 7',
     'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER,
     'build': process.env.TRAVIS_BUILD_NUMBER,
-    'name': 'angular-ladda-iPhone'
+    'name': 'angular-ladda-ie9'
   }],
 
   specs: [

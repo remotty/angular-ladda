@@ -23,8 +23,8 @@ $ bower install angular-ladda --save
 ...
 <link rel="stylesheet" href="bower_components/ladda/dist/ladda-themeless.min.css">
 ...
-<script src="bower_components/ladda/js/spin.js"></script>
-<script src="bower_components/ladda/js/ladda.js"></script>
+<script src="bower_components/ladda/dist/spin.min.js"></script>
+<script src="bower_components/ladda/dist/ladda.min.js"></script>
 <script src="bower_components/angular-ladda/dist/angular-ladda.min.js"></script>
 ...
 ```
