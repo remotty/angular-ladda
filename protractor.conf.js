@@ -1,8 +1,8 @@
 // An example configuration file.
 // https://raw.github.com/angular/protractor/master/example/conf.js
 exports.config = {         
-  sauceUser: 'subicura_ladda',
-  sauceKey: '69701299-076a-4533-8d55-00efcb736270',
+  sauceUser: process.env.SAUCE_USERNAME,
+  sauceKey: process.env.SAUCE_ACCESS_KEY,
   multiCapabilities: [{
     'browserName': 'chrome',
     'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER,
