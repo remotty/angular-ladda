@@ -26,7 +26,7 @@
           restrict: 'A',
           replace: false,
           terminal: true,
-          priority: 1000,
+          priority: 501,
           link: function (scope, element, attrs) {
             element.addClass('ladda-button');
             if(angular.isUndefined(element.attr('data-style'))) {
@@ -37,7 +37,7 @@
             $timeout(function() {
               element.removeAttr('ladda');
               element.removeAttr('data-ladda');
-              $compile(element)(scope);
+              $compile(element, null, 501)(scope);
 
               scope.$watch(attrs.ladda, function(loading) {
                 if(loading || angular.isNumber(loading)) {

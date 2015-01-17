@@ -1,5 +1,8 @@
 # angular-ladda
 
+## 0.1.15
+ * fix ngIf issue (fix #14)
+
 ## 0.1.14
  * rollback 0.1.13 (#15)
 

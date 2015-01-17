@@ -27,11 +27,14 @@
   <body ng-controller="TestController">
     <!-- <div ng-repeat="row in $rows">
       <button id="loader{{ row.id }}" ladda="loader{{ row.id }}" class="btn btn-primary" ng-class="{ 'sample': true }">Action</button>
+    </div> -->
+    <div ng-repeat="row in $rows">
+      <a class="btn btn-primary" ladda="loader1">test</a>
     </div>
-    <a class="btn btn-primary" ladda="loader1">test</a> -->
+    <a class="btn btn-primary" ladda="loader1">test</a>
     <a class="btn btn-primary" ladda="true" ng-if="loader1">test</a>
     <a class="btn btn-primary" ladda="isLoading" ng-click="isLoading = true" ng-if="loader1">test</a>
-    <!-- <form role="form" name='signUpForm' novalidate ladda="laddaLoad">
+    <form role="form" name='signUpForm' novalidate ladda="laddaLoad">
       <fieldset>
         <legend>Create new account</legend>
         <div class="form-group" show-errors>
@@ -46,8 +49,7 @@
       </button>
     </form>
     <a class="btn btn-primary" ladda="true" ng-if="loader">ng-if true</a>
-    <a class="btn btn-primary" ladda="{{ buttonText }}">test</a>
     <button id="btn" ladda="isLoading" ng-click="isLoading = true" class="btn btn-primary">{{ buttonText }}</button>
-    <button ladda="true" class="btn btn-primary">ladda button</button> -->
+    <button ladda="true" class="btn btn-primary">ladda button</button>
   </body>
 </html>
