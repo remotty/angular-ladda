@@ -8,20 +8,33 @@ exports.config = {
     'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER,
     'build': process.env.TRAVIS_BUILD_NUMBER,
     'name': 'angular-ladda-chrome'
-  },{
+  }, {
+    'browserName': 'safari',
+    'version': '8',
+    'platform': 'OS X 10.10',
+    'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER,
+    'build': process.env.TRAVIS_BUILD_NUMBER,
+    'name': 'angular-ladda-safari'
+  }, {
     'browserName': 'internet explorer',
     'version': '11',
     'platform': 'Windows 8.1',
     'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER,
     'build': process.env.TRAVIS_BUILD_NUMBER,
     'name': 'angular-ladda-ie11'
-  },{
+  }, {
     'browserName': 'internet explorer',
     'version': '9',
     'platform': 'Windows 7',
     'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER,
     'build': process.env.TRAVIS_BUILD_NUMBER,
     'name': 'angular-ladda-ie9'
+  }, {
+    'browserName': 'iPhone',
+    'version': '8.1',
+    'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER,
+    'build': process.env.TRAVIS_BUILD_NUMBER,
+    'name': 'angular-ladda-iphone'
   }],
 
   specs: [
