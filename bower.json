@@ -28,6 +28,7 @@
     "ladda": "~0.9.3"
   },
   "devDependencies": {
-    "bootstrap": "~3.3.1"
+    "bootstrap": "~3.3.1",
+    "angular-bootstrap": "~0.12.0"
   }
 }
