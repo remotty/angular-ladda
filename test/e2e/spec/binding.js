@@ -4,7 +4,6 @@ describe('Double curly binding test', function() {
   });
 
   it('should compile binding', function() {
-    browser.sleep(1000);
     expect(element(by.css('#loader1 .ladda-spinner div')).isPresent()).toBe(true);
   });
 });

@@ -1,5 +1,10 @@
 # angular-ladda
 
+## 0.2.0
+ * change compile logic
+ * fix double curly binding broken issue (#12)
+ * source refactoring
+
 ## 0.1.15
  * fix ngIf issue (fix #14)
 

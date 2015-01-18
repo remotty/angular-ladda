@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="/bower_components/ladda/dist/ladda-themeless.min.css">
     <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css">
     <script src="/bower_components/ladda/dist/spin.min.js"></script>
-    <script src="/bower_components/ladda/dist/ladda.min.js"></script>
+    <script src="/bower_components/ladda/js/ladda.js"></script>
     <script src="/bower_components/angular/angular.js"></script>
     <script src="/bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
     <script src="/src/angular-ladda.js"></script>
@@ -30,6 +30,10 @@
             });
           };
 
+          $scope.signUp = function() {
+            $scope.laddaLoad = true
+          };
+
           $timeout(function() {
             $scope.loader = true;
           }, 2000);
@@ -37,9 +41,9 @@
     </script>
   </head>
   <body ng-controller="TestController">
-    <!-- <div ng-repeat="row in $rows">
+    <div ng-repeat="row in $rows">
       <button id="loader{{ row.id }}" ladda="loader{{ row.id }}" class="btn btn-primary" ng-class="{ 'sample': true }">Action</button>
-    </div> -->
+    </div>
     <div ng-repeat="row in $rows">
       <a class="btn btn-primary" ladda="loader1">test</a>
     </div>

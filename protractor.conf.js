@@ -7,35 +7,43 @@ exports.config = {
     'browserName': 'chrome',
     'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER,
     'build': process.env.TRAVIS_BUILD_NUMBER,
-    'name': 'angular-ladda-chrome'
+    'name': 'chrome'
   }, {
     'browserName': 'safari',
     'version': '8',
     'platform': 'OS X 10.10',
     'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER,
     'build': process.env.TRAVIS_BUILD_NUMBER,
-    'name': 'angular-ladda-safari'
+    'name': 'safari-8'
   }, {
     'browserName': 'internet explorer',
     'version': '11',
     'platform': 'Windows 8.1',
     'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER,
     'build': process.env.TRAVIS_BUILD_NUMBER,
-    'name': 'angular-ladda-ie11'
-  }, {
-    'browserName': 'internet explorer',
-    'version': '9',
-    'platform': 'Windows 7',
-    'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER,
-    'build': process.env.TRAVIS_BUILD_NUMBER,
-    'name': 'angular-ladda-ie9'
+    'name': 'ie-11'
   }, {
     'browserName': 'iPhone',
     'version': '8.1',
     'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER,
     'build': process.env.TRAVIS_BUILD_NUMBER,
-    'name': 'angular-ladda-iphone'
-  }],
+    'name': 'iphone-8.1'
+  }/*, {
+    'browserName': 'internet explorer',
+    'version': '9',
+    'platform': 'Windows 7',
+    'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER,
+    'build': process.env.TRAVIS_BUILD_NUMBER,
+    'name': 'ie-9'
+  }, {
+    'browserName': 'android',
+    'version': '4.4',
+    'platform': 'Linux',
+    'deviceName': 'Samsung Galaxy S3 Emulator',
+    'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER,
+    'build': process.env.TRAVIS_BUILD_NUMBER,
+    'name': 'android-4.4'
+  }*/],
 
   specs: [
     './test/e2e/spec/**/*.js'
