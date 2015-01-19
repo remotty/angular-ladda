@@ -1,5 +1,8 @@
 # angular-ladda
 
+## 0.2.1
+ * add "main" field to package.json
+
 ## 0.2.0
  * change compile logic
  * fix double curly binding broken issue (#12)

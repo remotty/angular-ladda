@@ -76,6 +76,12 @@ gulp.task('test', ['build'], function () {
   gulp.start('protractor');
 });
 
-gulp.task('default', ['clean', 'jshint'], function () {
+gulp.task('copysrc', function () {
+  gulp.src('src/*.js')
+    .pipe($.header("/*! <%= name %> <%= version %> */\n", { name: pkg.name, version: pkg.version } ))
+    .pipe(gulp.dest('dist'));
+});
+
+gulp.task('default', ['clean', 'jshint', 'copysrc'], function () {
   gulp.start('build');
 });
