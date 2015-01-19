@@ -1,6 +1,10 @@
 {
   "name": "angular-ladda",
   "version": "0.2.0",
+  "main": "dist/angular-ladda.min.js",
+  "dependencies": {
+    "angular": "^1.2.0"
+  },
   "devDependencies": {
     "del": "^0.1.0",
     "gulp": "^3.6.0",
