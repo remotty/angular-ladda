@@ -22,7 +22,7 @@
         }
       };
     })
-    .directive('ladda', ['$compile', '$timeout', 'ladda', function ($compile, $timeout, laddaOption) {
+    .directive('ladda', ['ladda', function (laddaOption) {
       return {
         restrict: 'A',
         priority: -1,

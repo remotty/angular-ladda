@@ -11,7 +11,7 @@ gulp.task('jshint', function () {
     .pipe($.jshint.reporter('fail'));
 });
 
-gulp.task('compress', function() {
+gulp.task('javascript', function() {
   gulp.src('src/*.js')
     .pipe($.uglify())
     .pipe($.header("/*! <%= name %> <%= version %> */\n", { name: pkg.name, version: pkg.version } ))
@@ -68,7 +68,7 @@ gulp.task('protractor', function() {
 
 gulp.task('clean', require('del').bind(null, ['.tmp', 'dist']));
 
-gulp.task('build', ['compress'], function () {
+gulp.task('build', ['javascript'], function () {
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 
@@ -82,6 +82,6 @@ gulp.task('copysrc', function () {
     .pipe(gulp.dest('dist'));
 });
 
-gulp.task('default', ['clean', 'jshint', 'copysrc'], function () {
-  gulp.start('build');
+gulp.task('default', ['clean', 'jshint'], function () {
+  gulp.start('build', 'copysrc');
 });
