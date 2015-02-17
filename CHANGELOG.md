@@ -1,5 +1,8 @@
 # angular-ladda
 
+## 0.2.2
+ * Requirejs / AMD support 
+
 ## 0.2.1
  * add "main" field to package.json
 
