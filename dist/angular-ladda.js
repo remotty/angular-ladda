@@ -5,27 +5,28 @@
  */
 
 /* global Ladda */
+/* exported Ladda */
 (function (root, factory)
 {
-    'use strict';
-    var Ladda;
-    if (typeof exports === 'object') {
-        // CommonJS module
-        // Load ladda
-        try { Ladda = require('ladda'); } catch (e) {}
-        module.exports = factory(Ladda);
-    } else if (typeof define === 'function' && define.amd) {
-        // AMD. Register as an anonymous module.
-        define(function (req)
-        {
-            // Load ladda as an optional dependency
-            var id = 'ladda';
-            try { Ladda = req(id); } catch (e) {}
-            return factory(Ladda);
-        });
-    } else {
-        root.Ladda = factory(root.Ladda);
-    }
+  'use strict';
+  var Ladda;
+  if (typeof exports === 'object') {
+    // CommonJS module
+    // Load ladda
+    try { Ladda = require('ladda'); } catch (e) {}
+    module.exports = factory(Ladda);
+  } else if (typeof define === 'function' && define.amd) {
+    // AMD. Register as an anonymous module.
+    define(function (req)
+    {
+      // Load ladda as an optional dependency
+      var id = 'ladda';
+      try { Ladda = req(id); } catch (e) {}
+      return factory(Ladda);
+    });
+  } else {
+    root.Ladda = factory(root.Ladda);
+  }
 }(this, function (Ladda){
   'use strict';
 
