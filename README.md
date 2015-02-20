@@ -1,4 +1,7 @@
-# angular-ladda [![Build Status](https://travis-ci.org/remotty/angular-ladda.svg?branch=master)](https://travis-ci.org/remotty/angular-ladda)
+# angular-ladda 
+![License](https://img.shields.io/npm/l/angular-ladda.svg)
+![Bower](https://img.shields.io/bower/v/angular-ladda.svg) [![NPM](https://img.shields.io/npm/v/angular-ladda.svg)](https://www.npmjs.com/package/angular-ladda)
+[![Build Status](https://travis-ci.org/remotty/angular-ladda.svg?branch=master)](https://travis-ci.org/remotty/angular-ladda)
 
 An angular directive wrapper for Ladda.
 
