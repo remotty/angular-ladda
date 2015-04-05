@@ -68,23 +68,25 @@
 
           // add watch!
           scope.$watch(attrs.ladda, function(loading) {
-            if(loading || angular.isNumber(loading)) {
-              if(!ladda.isLoading()) {
-                ladda.start();
-              }
-              if(angular.isNumber(loading)) {
-                ladda.setProgress(loading);
-              }
-            } else {
+            if(!loading && !angular.isNumber(loading)) {
               ladda.stop();
-              // When the button also have the ng-disabled directive it needs to be 
+              // When the button also have the ng-disabled directive it needs to be
               // re-evaluated since the disabled attribute is removed by the 'stop' method.
               if (attrs.ngDisabled) {
                 element.attr('disabled', scope.$eval(attrs.ngDisabled));
               }
+              return;
+            }
+            if(!ladda.isLoading()) {
+              ladda.start();
+            }
+            if(angular.isNumber(loading)) {
+              ladda.setProgress(loading);
             }
           });
         }
       };
     }]);
+    
+    return Ladda;
 }));
