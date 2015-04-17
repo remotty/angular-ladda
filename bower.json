@@ -25,7 +25,7 @@
   ],
   "dependencies": {
     "angular": ">= 1.2.0",
-    "ladda": "~0.9.3"
+    "ladda": "https://github.com/trongtran/Ladda.git"
   },
   "devDependencies": {
     "bootstrap": "~3.3.1",
