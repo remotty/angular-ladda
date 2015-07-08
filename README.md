@@ -115,6 +115,39 @@ change color of spinner
 </button>
 ```
 
+## Browserify support
+
+angular-ladda doesn't work properly with browserify, since it references the Spinner and Ladda libraries, which are not proper AMD modules (and are also not always used as such in angular-ladda's code).
+In order to make it works with browserify you will need to use browserify-shim.
+
+```sh
+$ npm install --save browserify-shim
+```
+
+in your package.json, add the following object:
+
+```js
+"dependencies": {
+    ...
+},
+"browserify-shim": {
+
+    "ladda": "global:Ladda",
+
+    "spin.js": "global:Spinner"
+
+}
+```
+
+require Spinner, Ladda and angular-ladda wherever you usually require external modules (the ordering here is important):
+
+```javascript
+window.Spinner = require('/components/ladda/js/spin');
+window.Ladda = require('/components/ladda/js/ladda');
+require('/components/angular-ladda/dist/angular-ladda');
+```
+
+
 ## Links
 
 * [Ladda](http://lab.hakim.se/ladda/)
