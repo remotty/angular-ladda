@@ -1,4 +1,4 @@
-# angular-ladda 
+# angular-ladda
 ![License](https://img.shields.io/npm/l/angular-ladda.svg)
 ![Bower](https://img.shields.io/bower/v/angular-ladda.svg) [![NPM](https://img.shields.io/npm/v/angular-ladda.svg)](https://www.npmjs.com/package/angular-ladda)
 [![Build Status](https://travis-ci.org/remotty/angular-ladda.svg?branch=master)](https://travis-ci.org/remotty/angular-ladda)
@@ -32,6 +32,9 @@ $ bower install angular-ladda --save
 ...
 ```
 
+**!!!Order of *.js includes is very important!!!**
+
+
 (3) add `'angular-ladda'` to your main module's list of dependencies
 
 ```javascript
@@ -62,7 +65,7 @@ use `laddaProvider`
 ```js
 angular.module(xxxx)
   .config(function (laddaProvider) {
-    laddaProvider.setOption({ 
+    laddaProvider.setOption({
       style: 'expand-left'
     });
   })

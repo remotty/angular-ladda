@@ -24,10 +24,10 @@ exports.config = {
     'name': 'ie-11'
   }, {
     'browserName': 'iPhone',
-    'version': '8.1',
+    'version': '8.2',
     'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER,
     'build': process.env.TRAVIS_BUILD_NUMBER,
-    'name': 'iphone-8.1'
+    'name': 'iphone-8.2'
   }/*, {
     'browserName': 'internet explorer',
     'version': '9',
