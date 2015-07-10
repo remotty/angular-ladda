@@ -1,5 +1,8 @@
 # angular-ladda
 
+## 0.3.1
+ * remove requirejs from bower.json
+
 ## 0.3.0
  * upgrade ladda latest version (0.9.8)
  * AMD(requirejs) / CommonJS(webpack) support
