@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Webpack(CommonJS) Test</title>
+    <link rel="stylesheet" href="/bower_components/ladda/dist/ladda-themeless.min.css">
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css">
+  </head>
+  <body ng-controller="TestController">
+    <button id="btn" ladda="isLoading" ng-click="isLoading = true" class="btn btn-primary">{{ buttonText }}</button>
+    <script src="commonjs/bundle.js"></script>
+  </body>
+</html>

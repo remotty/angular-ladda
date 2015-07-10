@@ -1,4 +1,4 @@
-/*! angular-ladda 0.2.2 */
+/*! angular-ladda 0.3.0 */
 /**!
  * AngularJS Ladda directive
  * @author Chungsub Kim <subicura@subicura.com>
@@ -23,6 +23,7 @@
   'use strict';
 
   var moduleName = 'angular-ladda';
+  
   angular.module(moduleName, [])
     .provider('ladda', function () {
       var opts = {
