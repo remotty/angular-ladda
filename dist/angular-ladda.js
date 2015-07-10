@@ -9,28 +9,21 @@
 (function (root, factory)
 {
   'use strict';
-  var Ladda;
-  if (typeof exports === 'object') {
-    // CommonJS module
-    // Load ladda
-    try { Ladda = require('ladda'); } catch (e) {}
-    module.exports = factory(Ladda);
-  } else if (typeof define === 'function' && define.amd) {
+  if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(function (req)
-    {
-      // Load ladda as an optional dependency
-      var id = 'ladda';
-      try { Ladda = req(id); } catch (e) {}
-      return factory(Ladda);
-    });
+    define(['angular', 'ladda'], factory);
+  } else if (typeof module !== 'undefined' && typeof module.exports === 'object') {
+    // CommonJS support (for us webpack/browserify/ComponentJS folks)
+    module.exports = factory(require('angular'), require('ladda'));
   } else {
-    root.Ladda = factory(root.Ladda);
+    // in the case of no module loading system
+    return factory(root.angular, root.Ladda);
   }
-}(this, function (Ladda){
+}(this, function (angular, Ladda){
   'use strict';
 
-  angular.module('angular-ladda', [])
+  var moduleName = 'angular-ladda';
+  angular.module(moduleName, [])
     .provider('ladda', function () {
       var opts = {
         'style': 'zoom-in'
@@ -88,5 +81,5 @@
       };
     }]);
     
-    return Ladda;
+  return moduleName;
 }));

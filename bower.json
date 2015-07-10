@@ -25,7 +25,8 @@
   ],
   "dependencies": {
     "angular": ">= 1.2.0",
-    "ladda": "~0.9.3"
+    "ladda": "~0.9.8",
+    "requirejs": "~2.1.18"
   },
   "devDependencies": {
     "bootstrap": "~3.3.1",

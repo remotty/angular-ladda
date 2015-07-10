@@ -1,5 +1,9 @@
 # angular-ladda
 
+## 0.3
+ * upgrade ladda latest version (0.9.8)
+ * AMD / CommonJS support
+
 ## 0.2.2
  * Requirejs / AMD support 
 
