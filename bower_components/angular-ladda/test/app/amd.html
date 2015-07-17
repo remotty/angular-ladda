@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+  <head>
+    <title>RequireJS(AMD) Test</title>
+    <link rel="stylesheet" href="/bower_components/ladda/dist/ladda-themeless.min.css">
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css">
+  </head>
+  <body ng-controller="TestController">
+    <button id="btn" ladda="isLoading" ng-click="isLoading = true" class="btn btn-primary">{{ buttonText }}</button>
+    <script data-main="amd/main" src="bower_components/requirejs/require.js"></script>
+  </body>
+</html>
