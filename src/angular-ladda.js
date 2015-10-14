@@ -13,7 +13,7 @@
     define(['angular', 'ladda'], factory);
   } else if (typeof module !== 'undefined' && typeof module.exports === 'object') {
     // CommonJS support (for us webpack/browserify/ComponentJS folks)
-    module.exports = factory(require('angular'), require('ladda'));
+    module.exports = factory(window.angular, require('ladda'));
   } else {
     // in the case of no module loading system
     return factory(root.angular, root.Ladda);
