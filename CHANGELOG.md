@@ -1,5 +1,8 @@
 # angular-ladda
 
+## 0.3.2
+ * use window.angular in CommonJS
+
 ## 0.3.1
  * remove requirejs from bower.json
 

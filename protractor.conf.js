@@ -10,11 +10,11 @@ exports.config = {
     'name': 'chrome'
   }, {
     'browserName': 'safari',
-    'version': '8',
-    'platform': 'OS X 10.10',
+    'version': '9',
+    'platform': 'OS X 10.11',
     'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER,
     'build': process.env.TRAVIS_BUILD_NUMBER,
-    'name': 'safari-8'
+    'name': 'safari-9'
   }, {
     'browserName': 'internet explorer',
     'version': '11',
@@ -24,10 +24,10 @@ exports.config = {
     'name': 'ie-11'
   }, {
     'browserName': 'iPhone',
-    'version': '8.2',
+    'version': '9.1',
     'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER,
     'build': process.env.TRAVIS_BUILD_NUMBER,
-    'name': 'iphone-8.2'
+    'name': 'iphone-9.1'
   }/*, {
     'browserName': 'internet explorer',
     'version': '9',
@@ -53,6 +53,6 @@ exports.config = {
   framework: 'jasmine',
   jasmineNodeOpts: {
     showColors: true,
-    defaultTimeoutInterval: 30000
+    defaultTimeoutInterval: 90000
   }
 };
