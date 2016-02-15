@@ -1,4 +1,4 @@
-/*! angular-ladda 0.3.1 */
+/*! angular-ladda 0.3.2 */
 /**!
  * AngularJS Ladda directive
  * @author Chungsub Kim <subicura@subicura.com>
@@ -14,7 +14,7 @@
     define(['angular', 'ladda'], factory);
   } else if (typeof module !== 'undefined' && typeof module.exports === 'object') {
     // CommonJS support (for us webpack/browserify/ComponentJS folks)
-    module.exports = factory(require('angular'), require('ladda'));
+    module.exports = factory(window.angular || require('angular'), require('ladda'));
   } else {
     // in the case of no module loading system
     return factory(root.angular, root.Ladda);
@@ -77,6 +77,11 @@
             if(angular.isNumber(loading)) {
               ladda.setProgress(loading);
             }
+          });
+          
+          // use remove on scope destroy to stop memory leaks 
+          scope.$on('$destroy', function () {
+              ladda.remove();
           });
         }
       };

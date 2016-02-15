@@ -77,6 +77,11 @@
               ladda.setProgress(loading);
             }
           });
+          
+          // use remove on scope destroy to stop memory leaks 
+          scope.$on('$destroy', function () {
+              ladda.remove();
+          });
         }
       };
     }]);
