@@ -1,5 +1,8 @@
 # angular-ladda
 
+## 0.3.4
+ * change bower dependency version
+
 ## 0.3.3
  * support global spinner-size, spinner-color config
 
