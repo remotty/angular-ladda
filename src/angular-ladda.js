@@ -46,6 +46,12 @@
           if(angular.isUndefined(element.attr('data-style'))) {
             element.attr('data-style', laddaOption.style || 'zoom-in');
           }
+          if(angular.isUndefined(element.attr('data-spinner-size')) && laddaOption.spinnerSize) {
+            element.attr('data-spinner-size', laddaOption.spinnerSize);
+          }
+          if(angular.isUndefined(element.attr('data-spinner-color')) && laddaOption.spinnerColor) {
+            element.attr('data-spinner-color', laddaOption.spinnerColor);
+          }
 
           // ladda breaks childNode's event property.
           // because ladda use innerHTML instead of append node

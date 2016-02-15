@@ -65,8 +65,10 @@ use `laddaProvider`
 ```js
 angular.module(xxxx)
   .config(function (laddaProvider) {
-    laddaProvider.setOption({
-      style: 'expand-left'
+    laddaProvider.setOption({ /* optional */
+      style: 'expand-left',
+      spinnerSize: 35,
+      spinnerColor: '#ffffff'
     });
   })
 ```
