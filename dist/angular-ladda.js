@@ -73,6 +73,13 @@
             }
             if(!ladda.isLoading()) {
               ladda.start();
+              if( element.attr('data-keep-enabled') ) {
+                if (attrs.ngDisabled) {
+                  element.attr('disabled', scope.$eval(attrs.ngDisabled));
+                } else {
+                  element.removeAttr('disabled');
+                }
+              }                
             }
             if(angular.isNumber(loading)) {
               ladda.setProgress(loading);
