@@ -2,9 +2,16 @@
   "name": "angular-ladda",
   "version": "0.3.4",
   "main": "dist/angular-ladda.js",
+  "files": [
+    "dist",
+    "src",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
   "dependencies": {
-    "angular": "^1.2.0",
-    "ladda": "^0.9.8"
+    "angular": ">=1.2.0 <2.0",
+    "ladda": ">=0.9.8"
   },
   "devDependencies": {
     "del": "^0.1.0",

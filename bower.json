@@ -21,11 +21,12 @@
     "protractor.conf.js",
     "gulpfile.js",
     "bower_components",
-    "node_modules"
+    "node_modules",
+    "test"
   ],
   "dependencies": {
-    "angular": "^1.2.0",
-    "ladda": "~0.9.8"
+    "angular": ">=1.2.0 <2.0",
+    "ladda": ">=0.9.8"
   },
   "devDependencies": {
     "bootstrap": "^3.3.1",

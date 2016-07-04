@@ -1,5 +1,9 @@
 # angular-ladda
 
+## 0.4
+ * update bower & npm config file
+ * update ladda version 1.0 & angular version
+
 ## 0.3.4
  * change bower dependency version
 
