@@ -132,6 +132,25 @@
           black
         </a>
       </div>
+
+      <div class="demo-list">
+        <h4>Array sample</h4>
+      </div>
+      <div class="demo-list">
+        <a ladda="item.loading" class="btn btn-primary" data-style="zoom-in" ng-click="clickArrayBtn($index)" ng-repeat="item in loading.items track by $index">
+          items {{item.name}}
+        </a>
+      </div>
+      <pre><code class="language-javascript">$scope.loading.items = [];
+for(var i=0; i<20; i++) {
+  $scope.loading.items.push({ name: 'item ' + i, loading: false });
+}
+$scope.clickArrayBtn = function(idx) {
+  $scope.loading.items[idx].loading = true;
+  $timeout(function() {
+    $scope.loading.items[idx].loading = false;
+  }, 2000);
+};</code></pre>
     </div>
 
     <hr />
@@ -233,7 +252,7 @@
   </div>
 
   <script src="prism.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.16/angular.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.min.js"></script>
   <script src="bower_components/ladda/dist/spin.min.js"></script>
   <script src="bower_components/ladda/dist/ladda.min.js"></script>
   <script src="bower_components/angular-ladda/dist/angular-ladda.min.js"></script>
@@ -241,6 +260,7 @@
     angular.module('ladda', ['angular-ladda'])
       .controller('DemoCtrl', function($scope, $timeout) {
         $scope.loading = {};
+
         $scope.clickBtn = function(style) {
           $scope.loading[style.replace('-','_')] = true;
           $timeout(function() {
@@ -260,6 +280,18 @@
           }, 1500);
           $timeout(function() {
             $scope.loading[style.replace('-','_') + "_progress"] = false;
+          }, 2000);
+        };
+
+        // array
+        $scope.loading.items = [];
+        for(var i=0; i<20; i++) {
+          $scope.loading.items.push({ name: 'item ' + i, loading: false });
+        }
+        $scope.clickArrayBtn = function(idx) {
+          $scope.loading.items[idx].loading = true;
+          $timeout(function() {
+            $scope.loading.items[idx].loading = false;
           }, 2000);
         };
       });
