@@ -38,56 +38,58 @@
         }
       };
     })
-    .directive('ladda', ['ladda', function (laddaOption) {
+    .directive('ladda', ['ladda', '$timeout', function (laddaOption, $timeout) {
       return {
         restrict: 'A',
         priority: -1,
         link: function (scope, element, attrs) {
-          element.addClass('ladda-button');
-          if(angular.isUndefined(element.attr('data-style'))) {
-            element.attr('data-style', laddaOption.style || 'zoom-in');
-          }
-          if(angular.isUndefined(element.attr('data-spinner-size')) && laddaOption.spinnerSize) {
-            element.attr('data-spinner-size', laddaOption.spinnerSize);
-          }
-          if(angular.isUndefined(element.attr('data-spinner-color')) && laddaOption.spinnerColor) {
-            element.attr('data-spinner-color', laddaOption.spinnerColor);
-          }
+          $timeout(function() {
+            element.addClass('ladda-button');
+            if(angular.isUndefined(element.attr('data-style'))) {
+              element.attr('data-style', laddaOption.style || 'zoom-in');
+            }
+            if(angular.isUndefined(element.attr('data-spinner-size')) && laddaOption.spinnerSize) {
+              element.attr('data-spinner-size', laddaOption.spinnerSize);
+            }
+            if(angular.isUndefined(element.attr('data-spinner-color')) && laddaOption.spinnerColor) {
+              element.attr('data-spinner-color', laddaOption.spinnerColor);
+            }
 
-          // ladda breaks childNode's event property.
-          // because ladda use innerHTML instead of append node
-          if(!element[0].querySelector('.ladda-label')) {
-            var labelWrapper = document.createElement('span');
-            labelWrapper.className = 'ladda-label';
-            angular.element(labelWrapper).append(element.contents());
-            element.append(labelWrapper);
-          }
+            // ladda breaks childNode's event property.
+            // because ladda use innerHTML instead of append node
+            if(!element[0].querySelector('.ladda-label')) {
+              var labelWrapper = document.createElement('span');
+              labelWrapper.className = 'ladda-label';
+              angular.element(labelWrapper).append(element.contents());
+              element.append(labelWrapper);
+            }
 
-          // create ladda button
-          var ladda = Ladda.create( element[0] );
+            // create ladda button
+            var ladda = Ladda.create( element[0] );
 
-          // add watch!
-          scope.$watch(attrs.ladda, function(loading) {
-            if(!loading && !angular.isNumber(loading)) {
-              ladda.stop();
-              // When the button also have the ng-disabled directive it needs to be
-              // re-evaluated since the disabled attribute is removed by the 'stop' method.
-              if (attrs.ngDisabled) {
-                element.attr('disabled', scope.$eval(attrs.ngDisabled));
+            // add watch!
+            scope.$watch(attrs.ladda, function(loading) {
+              if(!loading && !angular.isNumber(loading)) {
+                ladda.stop();
+                // When the button also have the ng-disabled directive it needs to be
+                // re-evaluated since the disabled attribute is removed by the 'stop' method.
+                if (attrs.ngDisabled) {
+                  element.attr('disabled', scope.$eval(attrs.ngDisabled));
+                }
+                return;
               }
-              return;
-            }
-            if(!ladda.isLoading()) {
-              ladda.start();
-            }
-            if(angular.isNumber(loading)) {
-              ladda.setProgress(loading);
-            }
-          });
-          
-          // use remove on scope destroy to stop memory leaks 
-          scope.$on('$destroy', function () {
-              ladda.remove();
+              if(!ladda.isLoading()) {
+                ladda.start();
+              }
+              if(angular.isNumber(loading)) {
+                ladda.setProgress(loading);
+              }
+            });
+            
+            // use remove on scope destroy to stop memory leaks 
+            scope.$on('$destroy', function () {
+                ladda.remove();
+            });
           });
         }
       };
