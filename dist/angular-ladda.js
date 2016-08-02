@@ -1,4 +1,4 @@
-/*! angular-ladda 0.4.1 */
+/*! angular-ladda 0.4.2 */
 /**!
  * AngularJS Ladda directive
  * @author Chungsub Kim <subicura@subicura.com>

@@ -1,5 +1,8 @@
 # angular-ladda
 
+## 0.4.2
+ * fix size caculate error
+
 ## 0.4.1
  * fix npm package dependency setting
 
