@@ -1,6 +1,6 @@
 {
   "name": "angular-ladda",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "main": "dist/angular-ladda.js",
   "files": [
     "dist",

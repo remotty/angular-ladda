@@ -1,5 +1,8 @@
 # angular-ladda
 
+## 0.4.3
+ * prevent ladda null reference
+
 ## 0.4.2
  * fix size caculate error
 
