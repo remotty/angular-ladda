@@ -87,7 +87,9 @@
             
             // use remove on scope destroy to stop memory leaks 
             scope.$on('$destroy', function () {
+              if (ladda) { // prevent null reference
                 ladda.remove();
+              }
             });
           });
         }
