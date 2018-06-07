@@ -10,7 +10,7 @@
     "LICENSE"
   ],
   "dependencies": {
-    "ladda": ">=0.9.8"
+    "ladda": ">=0.9.8 <2.0.0"
   },
   "peerDependencies": {
     "angular": ">=1.2.0 <2.0"
